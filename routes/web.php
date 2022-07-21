@@ -14,11 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home',[
+        "judul" => "Home",
+        "name" => "Saifit2787"
+    ]);
 });
 
 Route::get('/about', function () {
     return view('about',[
+        "judul" =>"About",
         "name" => "Saiful Fitri",
         "email" =>"saifit2787@gmail.com",
         "image" => "img/saifit2787.jpg"
@@ -26,6 +30,12 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/posts', function () {
-    return view('posts');
+Route::get('/blog', function () {
+    return view('posts',[
+        "judul" =>"Post",
+        "name" => "Saiful Fitri",
+        "email" =>"saifit2787@gmail.com",
+        "image" => "img/saifit2787.jpg"
+
+    ]);
 });
